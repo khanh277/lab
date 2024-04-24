@@ -1,0 +1,7 @@
+D:\C#\prjhoadon\bin\Debug\prjhoadon.exe.config
+D:\C#\prjhoadon\bin\Debug\prjhoadon.exe
+D:\C#\prjhoadon\bin\Debug\prjhoadon.pdb
+D:\C#\prjhoadon\obj\Debug\prjhoadon.csproj.AssemblyReference.cache
+D:\C#\prjhoadon\obj\Debug\prjhoadon.csproj.CoreCompileInputs.cache
+D:\C#\prjhoadon\obj\Debug\prjhoadon.exe
+D:\C#\prjhoadon\obj\Debug\prjhoadon.pdb
