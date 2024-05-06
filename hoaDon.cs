@@ -6,7 +6,7 @@
 
     namespace prjhoadon
     {
-        internal class hoaDon
+         class HoaDon
         {
             private string _code;
             private string _name;
@@ -14,7 +14,7 @@
             private int _amount;
             private double _total;
 
-            public hoaDon( string code, string name, DateTime exportDate, int amount, double total)
+            public HoaDon( string code, string name, DateTime exportDate, int amount, double total)
             {
                _code = code;
                _name = name;
