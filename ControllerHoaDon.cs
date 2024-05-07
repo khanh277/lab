@@ -9,19 +9,27 @@ using System.Threading.Tasks;
 
 namespace prjhoadon
 {
-    internal class ControllerHoaDon
+    class ControllerHoaDon
     {
 
-        List<HoaDon> listHoaDon = new List<HoaDon>();
+        private List<HoaDon> listHoaDon;
+
+        public ControllerHoaDon(List<HoaDon> hoaDonList)
+        {
+            listHoaDon = hoaDonList;
+        }
+
 
         public void Add() {
             Console.Write("Nhap code: ");
             string code = Console.ReadLine().Trim();
-            if (CheckDupilicate(code)) {
-                Console.WriteLine("code is duplicate !!");
+            while (CheckDuplicate(code))
+            {
+                Console.WriteLine("Code hoa don da ton tai xin vui long nhap lai!!");
                 Console.Write("Nhap lai code: ");
                 code = Console.ReadLine().Trim();
             }
+
             Console.Write("Nhap name: ");
             string name = Console.ReadLine().Trim();
 
@@ -47,17 +55,9 @@ namespace prjhoadon
             Console.WriteLine("Add thanh cong !!");
         }
 
-        private bool CheckDupilicate(string code)
+        private bool CheckDuplicate(string code)
         {
-            foreach (var hoaDon in listHoaDon)
-            {
-                if (hoaDon.GetCode().Equals(code))
-                {
-                    return true;
-                }
-            }
-            return false;
-
+            return listHoaDon.Any(hd => hd.GetCode().Equals(code, StringComparison.OrdinalIgnoreCase));
         }
 
         private DateTime FormatDate() { 

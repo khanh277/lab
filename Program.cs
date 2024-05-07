@@ -43,7 +43,7 @@ namespace prjhoadon
                 List<HoaDon> listHoaDon = new List<HoaDon> { hoadon, hoadon1, hoadon2, hoadon3, hoadon4 };
 
                 var view = new HoaDonView();
-                var controller = new ControllerHoaDon();
+                var controller = new ControllerHoaDon(listHoaDon);
                 while (true)
                 {
                     view.displayMenu();
